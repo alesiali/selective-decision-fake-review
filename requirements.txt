@@ -1,0 +1,10 @@
+# Reproduction of every table and figure from the saved logits (CPU only; see README).
+# Exact versions with which the commands of the README were tested (Python 3.13.16, Linux x86_64); the same
+# versions were used to fit the TF-IDF logistic regression models (train_classical.py; train_salminen.py).
+# A second test with numpy 2.1.3, pandas 2.2.3, scipy 1.14.1, scikit-learn 1.6.1 and matplotlib 3.9.2 gave
+# byte-identical analysis outputs, tables and figure_data.json; only the image files (PNG, PDF) differed.
+numpy==2.5.3
+pandas==3.0.5
+scipy==1.18.1
+scikit-learn==1.9.1
+matplotlib==3.11.2

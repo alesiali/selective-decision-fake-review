@@ -1,0 +1,49 @@
+5a1b4a231d934b784ab35b2cc30a8784  .gitignore
+75c0cbd10448731c719f7afa0ff720bf  .zenodo.json
+348e90e07b45f784c828b8a0927092f8  CITATION.cff
+57e05de7acd93ab5e480a96397dfae34  LICENSE
+5629b0429185212f5832198f5e2bfbda  README.md
+2d6a275f556011524b52e663cf461d4b  code/analyze_logits.py
+c6edb29a4e2dbe198d49efd968bdb03c  code/diagnostic_platt_intercept.py
+3030404739512c48737f6c6b2a2ae7f5  code/make_figures.py
+9a2962af74ab13eb8a1bbfe3a325ee42  code/make_supp_tables_s11_s13.py
+4af07d3d40d1a87facc23ba97089c23b  code/make_tables.py
+d5a7f937ebd4d6446708fde6e4be6e3b  code/make_tables_salminen.py
+8168cff8c2e80adc4d8c1891f76ec495  code/prepare_salminen.py
+748fb422a6550bf5ae57ccc413239aaa  code/published_protocol.py
+5ca262fced3adf60d70fdddf29afb3ac  code/train_classical.py
+22acb1044a57e5df007a6d8188af5261  code/train_salminen.py
+25ac6bf72ad8470e580ebeb976b2fb98  code/train_save_logits.py
+6a7763de0a6d8ce1cc2aade5e6f42cad  data/hotel_meta_v2.csv
+2ca38b6ba5512b6daf4df329246d6f0c  data/salminen_processed.csv.gz
+b2efd4bb7fb0900f032a4f906bc4c848  figures/Figure 1.pdf
+818820ccdd0c3418e7a19c360fc34f11  figures/Figure 1.png
+dde42742bc50db72f8b943354599172d  figures/Figure 2.pdf
+252c2ee73ddc4e8bac862a6210dcee7c  figures/Figure 2.png
+bbf05da636b50e4a16f16d18f78e382a  figures/Figure 3.pdf
+e05807292c751ee1c04ba740e493af57  figures/Figure 3.png
+427bb1d99518cc7d4f0be2d374c55f99  figures/Figure 4.pdf
+7f8239b820837e4e667a500da8c16651  figures/Figure 4.png
+442868023c0d40a87dcdf439cfa76ebe  figures/Figure 5.pdf
+36487a56d47d0f70f043d123e8855c7b  figures/Figure 5.png
+9fc21c66e11834e4c428973a73d05568  figures/figure_data.json
+f6ee0ef37f13127852a1bdf05b94c552  logits/bert.zip
+d677ab75ffa6a0427a6c482b6ff0fc5e  logits/published_roberta.zip
+1030570f05f0fc24caa24b785abb37ba  logits/roberta.zip
+2af517340117fa5b65f196f990d73185  logits/salminen_roberta.zip
+34f0266dcdf4453616778153afa96b58  logits/salminen_tfidf_all.zip
+8bdb05023aad47d5163ec967329d4c92  logits/salminen_tfidf_sample.zip
+02fc8b1ff9a9579185175bb1753c6bf5  logits/tfidf_logreg.zip
+dd9e4c72c79bd3ef9877962c2debde61  requirements-gpu.txt
+e693d1991ffc2ec06c0f2aa82444a873  requirements.txt
+ff07613a40b64aec54d79122a9ceaee9  results/results.zip
+430dfea5322fb6796cadd8940933321f  tables/main_corpus_bert.md
+31e69bcc4fee375b51e077be9fbed747  tables/main_corpus_roberta_tfidf.md
+e335675c2c9dc1504e1c442060613241  tables/numbers_main_corpus_bert.json
+b24e1e0753730c2defc331baa1fb3cf9  tables/numbers_main_corpus_roberta_tfidf.json
+3fc933375f6c4d40d7c3d17aec3fa3a6  tables/numbers_second_dataset_S10_S11part3.json
+737a5717f8e5db8dea42d0c567566961  tables/numbers_second_dataset_S11_roberta_vs_tfidf.json
+6d2531e6b6c5b02db5c498dd8be1ae41  tables/published_protocol_S15.md
+23a70e9175b2983adf25088b7356e25e  tables/second_dataset_S10_S11part3.md
+9a076a32e07a079c6af209ecfda3edf8  tables/second_dataset_S11_S13.md
+f20cd31764ed7242e566a1cf235aa91d  tables/second_dataset_S11_roberta_vs_tfidf.md

@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this code, the saved logits or the processed data, please cite this archive and the article (under review)."
+type: software
+title: "Code, data and saved logits for: Selective Decision-Making for Cross-Domain Fake Review Detection under Uncertainty and Cost Constraints"
+version: "v2.0"
+license: MIT
+repository-code: "https://github.com/alesiali/selective-decision-fake-review"
+authors:
+  - family-names: "Ali"
+    given-names: "Osama Abdul Jaleel"
+    affiliation: "Universiti Kebangsaan Malaysia; Al-Muthanna University"
+    orcid: "https://orcid.org/0000-0002-0711-5025"
+  - family-names: "Abu Bakar"
+    given-names: "Azuraliza"
+    affiliation: "Universiti Kebangsaan Malaysia"
+  - family-names: "Kaur"
+    given-names: "Wandeep"
+    affiliation: "Universiti Kebangsaan Malaysia"
+abstract: >-
+  Code, saved logits of every run, a processed dataset and the analysis outputs for the article
+  "Selective Decision-Making for Cross-Domain Fake Review Detection under Uncertainty and Cost Constraints"
+  (under review). A cost-derived three-way rule labels a review deceptive, labels it genuine or defers it to a
+  human, using temperature-scaled probabilities of RoBERTa and BERT ensembles and of TF-IDF logistic regression
+  under leave-one-domain-out transfer. Every table and figure of the article can be reproduced from the saved
+  logits on a CPU.
+keywords:
+  - fake review detection
+  - deceptive opinion spam
+  - selective prediction
+  - reject option
+  - cost-sensitive decision
+  - domain shift
+  - calibration

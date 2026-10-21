@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+# OS
+.DS_Store
+# Extracted logits, regenerated analysis outputs and new runs (the zip files are tracked)
+logits/*/
+results/*/
+logits_new/
+# Decompressed second dataset (the .gz file is tracked)
+data/salminen_processed.csv
+# Main-corpus files: third-party data, not redistributed. Local copies go in the root folder; do not commit them.
+LIWC_*_readability_cleaned_dedup.csv
+LIWC.*_readability_cleaned_dedup.csv

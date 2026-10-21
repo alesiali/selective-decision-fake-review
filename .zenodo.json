@@ -1,0 +1,46 @@
+{
+  "title": "Code, data and saved logits for: Selective Decision-Making for Cross-Domain Fake Review Detection under Uncertainty and Cost Constraints",
+  "upload_type": "software",
+  "version": "v2.0",
+  "creators": [
+    {
+      "name": "Ali, Osama Abdul Jaleel",
+      "affiliation": "Universiti Kebangsaan Malaysia; Al-Muthanna University",
+      "orcid": "0000-0002-0711-5025"
+    },
+    {
+      "name": "Abu Bakar, Azuraliza",
+      "affiliation": "Universiti Kebangsaan Malaysia"
+    },
+    {
+      "name": "Kaur, Wandeep",
+      "affiliation": "Universiti Kebangsaan Malaysia"
+    }
+  ],
+  "description": "<p>Code, saved model outputs (logits) of every run, a processed dataset and the analysis outputs for the article <em>Selective Decision-Making for Cross-Domain Fake Review Detection under Uncertainty and Cost Constraints</em> (under review). The package contains the scripts that train the base classifiers (RoBERTa and BERT ensembles, TF-IDF logistic regression) under leave-one-domain-out transfer on the hotel, restaurant and doctor reviews of Li et al. (2014) and on ten product categories of the fake review dataset of Salminen et al. (2022); the saved logits of all runs; the decision-layer analysis, which applies a cost-derived three-way rule (label a review deceptive, label it genuine, or defer it to a human) and comparison rules to temperature-scaled probabilities; and the scripts that generate the tables and figures. Every table and figure of the article can be reproduced from the saved logits on a CPU, without the review texts of the main corpus; these texts are third-party data, are not redistributed, and are needed only to retrain the models (including the TF-IDF and SVM baselines of one supplementary table). The processed second dataset is included under CC BY 4.0. Version 2.0 is the version described in the article and replaces versions 1.0 and 1.1.</p>",
+  "license": "mit",
+  "access_right": "open",
+  "keywords": [
+    "fake review detection",
+    "deceptive opinion spam",
+    "selective prediction",
+    "reject option",
+    "cost-sensitive decision",
+    "domain shift",
+    "calibration"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://osf.io/tyue9/",
+      "relation": "isDerivedFrom",
+      "scheme": "url",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "10.5281/zenodo.21071981",
+      "relation": "isNewVersionOf",
+      "scheme": "doi",
+      "resource_type": "software"
+    }
+  ]
+}
