@@ -2,12 +2,12 @@
 75c0cbd10448731c719f7afa0ff720bf  .zenodo.json
 348e90e07b45f784c828b8a0927092f8  CITATION.cff
 57e05de7acd93ab5e480a96397dfae34  LICENSE
-5629b0429185212f5832198f5e2bfbda  README.md
-2d6a275f556011524b52e663cf461d4b  code/analyze_logits.py
+faf21c7cd857aa5bbb55eb347be1cac3  README.md
+acb3e0147599fd59d4b96a61f02a6764  code/analyze_logits.py
 c6edb29a4e2dbe198d49efd968bdb03c  code/diagnostic_platt_intercept.py
-3030404739512c48737f6c6b2a2ae7f5  code/make_figures.py
-9a2962af74ab13eb8a1bbfe3a325ee42  code/make_supp_tables_s11_s13.py
-4af07d3d40d1a87facc23ba97089c23b  code/make_tables.py
+b1b7fab3bfe801f004a4fc6e59ea1615  code/make_figures.py
+b4252bd69c1d88cced6c41c7f448c536  code/make_supp_tables_s11_s13.py
+8a50687d48c71c0add6a623e67f099c8  code/make_tables.py
 d5a7f937ebd4d6446708fde6e4be6e3b  code/make_tables_salminen.py
 8168cff8c2e80adc4d8c1891f76ec495  code/prepare_salminen.py
 748fb422a6550bf5ae57ccc413239aaa  code/published_protocol.py
@@ -18,15 +18,15 @@ d5a7f937ebd4d6446708fde6e4be6e3b  code/make_tables_salminen.py
 2ca38b6ba5512b6daf4df329246d6f0c  data/salminen_processed.csv.gz
 b2efd4bb7fb0900f032a4f906bc4c848  figures/Figure 1.pdf
 818820ccdd0c3418e7a19c360fc34f11  figures/Figure 1.png
-dde42742bc50db72f8b943354599172d  figures/Figure 2.pdf
-252c2ee73ddc4e8bac862a6210dcee7c  figures/Figure 2.png
+cc1210204abc8ae3f9722d782f7847ba  figures/Figure 2.pdf
+747415a44300595048c432e5569b194b  figures/Figure 2.png
 bbf05da636b50e4a16f16d18f78e382a  figures/Figure 3.pdf
 e05807292c751ee1c04ba740e493af57  figures/Figure 3.png
 427bb1d99518cc7d4f0be2d374c55f99  figures/Figure 4.pdf
 7f8239b820837e4e667a500da8c16651  figures/Figure 4.png
 442868023c0d40a87dcdf439cfa76ebe  figures/Figure 5.pdf
 36487a56d47d0f70f043d123e8855c7b  figures/Figure 5.png
-9fc21c66e11834e4c428973a73d05568  figures/figure_data.json
+5b8732da538ff6f49f759025b58bda0d  figures/figure_data.json
 f6ee0ef37f13127852a1bdf05b94c552  logits/bert.zip
 d677ab75ffa6a0427a6c482b6ff0fc5e  logits/published_roberta.zip
 1030570f05f0fc24caa24b785abb37ba  logits/roberta.zip
@@ -43,7 +43,7 @@ e335675c2c9dc1504e1c442060613241  tables/numbers_main_corpus_bert.json
 b24e1e0753730c2defc331baa1fb3cf9  tables/numbers_main_corpus_roberta_tfidf.json
 3fc933375f6c4d40d7c3d17aec3fa3a6  tables/numbers_second_dataset_S10_S11part3.json
 737a5717f8e5db8dea42d0c567566961  tables/numbers_second_dataset_S11_roberta_vs_tfidf.json
-6d2531e6b6c5b02db5c498dd8be1ae41  tables/published_protocol_S15.md
+1f6096c39eeeec759a3eb0dadf0d9ef9  tables/published_protocol_S15.md
 23a70e9175b2983adf25088b7356e25e  tables/second_dataset_S10_S11part3.md
-9a076a32e07a079c6af209ecfda3edf8  tables/second_dataset_S11_S13.md
+1ffc5e7daa7b1afa0e3fd8d38022bb12  tables/second_dataset_S11_S13.md
 f20cd31764ed7242e566a1cf235aa91d  tables/second_dataset_S11_roberta_vs_tfidf.md

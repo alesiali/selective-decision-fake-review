@@ -54,7 +54,7 @@ Each `.npz` file holds the validation and target logits, labels and row numbers 
 
 The hotel, restaurant and doctor reviews come from the cross-domain deceptive opinion spam corpus of Li et al. (2014), which we obtained from its authors on request. The corpus is third-party data and is not redistributed in this repository; researchers can request it from the authors of Li et al. (2014). The hotel reviews written by crowd workers (Turkers) and customers are also publicly available in the op_spam corpus of Ott et al. (2011; 2013): https://myleott.com/op-spam.html. The review texts belong to their authors and remain under the terms of the original corpora.
 
-The experiments used the de-duplicated files with the `clean_review` column (the model input) described in Section 4.1 of the article. Copies of these files can be checked against the following MD5 checksums, which are also recorded in the metadata of every logit file:
+The experiments used the de-duplicated files with the `clean_review` column (the model input) described in the "Dataset" section of the article. Copies of these files can be checked against the following MD5 checksums, which are also recorded in the metadata of every logit file:
 
 | File | Domain | Reviews | Genuine | Deceptive | MD5 |
 |---|---|---|---|---|---|
@@ -66,11 +66,11 @@ The metadata of the transformer runs (RoBERTa, BERT and the published-protocol r
 
 The review texts are not needed for any decision-layer result: every table, figure and supplementary table is reproduced from the saved logits and `data/hotel_meta_v2.csv` alone, except the TF-IDF and SVM rows of Supplementary Table S15, whose models are fitted on the texts. The three files are needed only to retrain the models (including those two baselines) and for the cleaning check of `prepare_salminen.py` (option `--main_dir`). For these steps, place the three files in the repository root; `.gitignore` lists them so that they are not committed by accident.
 
-`data/hotel_meta_v2.csv` gives, for each row of the hotel file (`row_id` 0-1874), the author type (`writer`: `expert` = written by hotel employees, `turker`, `customer`) and the polarity (`positive`, `negative`). It contains no review text. The labels were recovered from the block order of the hotel file (Section 4.1).
+`data/hotel_meta_v2.csv` gives, for each row of the hotel file (`row_id` 0-1874), the author type (`writer`: `expert` = written by hotel employees, `turker`, `customer`) and the polarity (`positive`, `negative`). It contains no review text. The labels were recovered from the block order of the hotel file (see the "Dataset" section of the article).
 
 ### Second dataset (Salminen et al. 2022)
 
-The fake product reviews of Salminen et al. (2022) are available from the authors' repository, https://osf.io/tyue9/, under the Creative Commons Attribution 4.0 International license (CC BY 4.0). `data/salminen_processed.csv.gz` was produced from their file `fake_reviews_dataset.csv` (MD5 `177a386fab45e3f85d140728b2387967`) by `code/prepare_salminen.py`, as described in Section 4.5 of the article: exact de-duplication, the text cleaning of the main corpus, removal of the last token of every review (truncation control), removal of near-duplicates across categories, and a balanced training sample of 200 fake and 200 original reviews per category (column `in_sample`). It is shared under the same license (CC BY 4.0). The decompressed file `salminen_processed.csv` has the MD5 checksum `e750693b5621ec3a349fce0f6e9b5d99`. The model input is the column `model_text`, the product category is `domain`, and `y` = 1 marks a computer-generated (fake) review. The file is needed only for retraining; to decompress it on any system:
+The fake product reviews of Salminen et al. (2022) are available from the authors' repository, https://osf.io/tyue9/, under the Creative Commons Attribution 4.0 International license (CC BY 4.0). `data/salminen_processed.csv.gz` was produced from their file `fake_reviews_dataset.csv` (MD5 `177a386fab45e3f85d140728b2387967`) by `code/prepare_salminen.py`, as described in the "Additional Dataset" section of the article: exact de-duplication, the text cleaning of the main corpus, removal of the last token of every review (truncation control), removal of near-duplicates across categories, and a balanced training sample of 200 fake and 200 original reviews per category (column `in_sample`). It is shared under the same license (CC BY 4.0). The decompressed file `salminen_processed.csv` has the MD5 checksum `e750693b5621ec3a349fce0f6e9b5d99`. The model input is the column `model_text`, the product category is `domain`, and `y` = 1 marks a computer-generated (fake) review. The file is needed only for retraining; to decompress it on any system:
 
 ```
 python -c "import gzip; open('data/salminen_processed.csv', 'wb').write(gzip.open('data/salminen_processed.csv.gz').read())"
@@ -121,7 +121,7 @@ python code/make_figures.py --analyze_py code/analyze_logits.py --roberta_logits
 
 What to expect:
 
-- `analyze_logits.py` lists the groups of runs it found. For TF-IDF and for RoBERTa on the second dataset, which have one model per repetition, it prints "expected 3 models, found 1"; this is expected. On the main corpus, one RoBERTa run is excluded as degenerate (it predicts one class for every source-validation review; Section 4.2).
+- `analyze_logits.py` lists the groups of runs it found. For TF-IDF and for RoBERTa on the second dataset, which have one model per repetition, it prints "expected 3 models, found 1"; this is expected. On the main corpus, one RoBERTa run is excluded as degenerate (it predicts one class for every source-validation review; see the "Protocol" section of the article).
 - `results/<group>/` receives the analysis outputs; they are identical to the content of `results/results.zip` (extract it elsewhere to compare, for example `python -m zipfile -e results/results.zip results_shipped/`). The file `results/published/classical_published_protocol.json` in the zip is not regenerated by these commands, because it needs the review texts (see "Retrain the models").
 - The Markdown and JSON files in `tables/` are overwritten with identical copies (in our test of the package). `tables/published_protocol_S15.md` is a static table (see its notes): its RoBERTa row is regenerated by step 5 (`results/published/roberta-base_published_all.json`), and its TF-IDF and SVM rows need the main-corpus files.
 - `make_figures.py` rebuilds the RoBERTa ensembles from the logits and checks every count and plotted value against the analysis outputs before drawing; it stops at the first failed check. In our test with the versions of `requirements.txt`, the PNG files were identical to the shipped ones and the PDF files differed only in their creation date. On another machine or with other library versions, the fitted temperatures can differ in their last digits, so the script compares recomputed values with small tolerances (see `TOL_AURC` in `make_figures.py`).
@@ -164,7 +164,7 @@ The tables are in `tables/`; each Markdown file has one section per table. `main
 | Supplementary Table S14 | BERT ensemble | `main_corpus_bert.md` (sections A-L) |
 | Supplementary Table S15 | Comparison with published results under their protocol | `published_protocol_S15.md`; full numbers in `results/published/` (in `results/results.zip`) |
 
-`tables/second_dataset_S11_roberta_vs_tfidf.md` is an intermediate file (parts 1-2 of Supplementary Table S11) that `make_supp_tables_s11_s13.py` reads. Section D of the main-corpus tables (same coverage, different selection) supports the coverage-matched comparison of Section 3.5; it has no table number.
+`tables/second_dataset_S11_roberta_vs_tfidf.md` is an intermediate file (parts 1-2 of Supplementary Table S11) that `make_supp_tables_s11_s13.py` reads. Section D of the main-corpus tables (same coverage, different selection) supports the coverage-matched comparison described in the "Comparison Rules" section of the article; it has no table number.
 
 ## Retrain the models (GPU, optional)
 
@@ -209,7 +209,7 @@ In the article, RoBERTa on the second dataset uses repetitions 0-2 (`--reps 0 1 
 | `CHOW-TUNED_S*` | three-way rule with two thresholds tuned on validation to minimize expected cost |
 | `MSP-TUNED_S*` | confidence rule: defer if max(p, 1 - p) is below a threshold tuned on validation (MSP = entropy) |
 | `DISAGREE-TUNED_S*` | ensemble disagreement rule: defer if the standard deviation of the members' probabilities exceeds a tuned threshold (ensembles only) |
-| `ORIGINAL-SDF` | entropy-adjusted score p * (1 - H(p)) with two thresholds tuned on validation (comparison rule, Section 3.5) |
+| `ORIGINAL-SDF` | entropy-adjusted score p * (1 - H(p)) with two thresholds tuned on validation (comparison rule; see the "Comparison Rules" section of the article) |
 | `FORCED-COST-NOENSCAL_S*`, `CHOW-NOENSCAL_S*` | the same rules without the ensemble-level temperature scaling (Supplementary Table S9) |
 | `MSP@CHOW-COVERAGE_S*`, `MSP@ORIGINAL-COVERAGE` | MSP ranking at the coverage of the cost-derived rule or of the entropy-adjusted score |
 | `DUAL-F1` | (coverage-floor analysis) two thresholds on p maximizing accepted macro-F1 subject to a coverage floor |
