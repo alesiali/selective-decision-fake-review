@@ -72,7 +72,7 @@
    "Calibration and ensemble weights": {
     "val": "labels"
    },
-   "Tuned comparison rules (Section 3.5)": {
+   "Tuned comparison rules": {
     "val": "labels"
    },
    "Decide on each target review": {
@@ -12342,7 +12342,7 @@
   "PASS  Fig 2 doctor: the 342 validation reviews come only from the source domains",
   "PASS  Fig 2 doctor: validation = 15% of every domain x class stratum, within one review {'hotel|0': 120, 'hotel|1': 162, 'restaurant|0': 30, 'restaurant|1': 30}",
   "PASS  Fig 2 doctor: one validation split per repetition (shared by its three seeds), a different one in each repetition",
-  "PASS  Fig 2 doctor: split seeds 42-46 and model seeds as in Section 4.2",
+  "PASS  Fig 2 doctor: split seeds 42-46 and model seeds as in the Protocol section",
   "PASS  Fig 2 doctor: source names as in Figure 3 (hotel + restaurant)",
   "PASS  Fig 2 restaurant: 15 runs trained on doctor + hotel",
   "PASS  Fig 2 restaurant: the same training, validation and target sizes in every run [(2065, 365, 400)]",
@@ -12351,7 +12351,7 @@
   "PASS  Fig 2 restaurant: the 365 validation reviews come only from the source domains",
   "PASS  Fig 2 restaurant: validation = 15% of every domain x class stratum, within one review {'doctor|0': 30, 'doctor|1': 53, 'hotel|0': 120, 'hotel|1': 162}",
   "PASS  Fig 2 restaurant: one validation split per repetition (shared by its three seeds), a different one in each repetition",
-  "PASS  Fig 2 restaurant: split seeds 42-46 and model seeds as in Section 4.2",
+  "PASS  Fig 2 restaurant: split seeds 42-46 and model seeds as in the Protocol section",
   "PASS  Fig 2 restaurant: source names as in Figure 3 (hotel + doctor)",
   "PASS  Fig 2 hotel: 15 runs trained on doctor + restaurant",
   "PASS  Fig 2 hotel: the same training, validation and target sizes in every run [(811, 144, 1875)]",
@@ -12360,7 +12360,7 @@
   "PASS  Fig 2 hotel: the 144 validation reviews come only from the source domains",
   "PASS  Fig 2 hotel: validation = 15% of every domain x class stratum, within one review {'doctor|0': 30, 'doctor|1': 54, 'restaurant|0': 30, 'restaurant|1': 30}",
   "PASS  Fig 2 hotel: one validation split per repetition (shared by its three seeds), a different one in each repetition",
-  "PASS  Fig 2 hotel: split seeds 42-46 and model seeds as in Section 4.2",
+  "PASS  Fig 2 hotel: split seeds 42-46 and model seeds as in the Protocol section",
   "PASS  Fig 2 hotel: source names as in Figure 3 (doctor + restaurant)",
   "PASS  Fig 2: gaps of the dashed line are ordered (lower < upper)",
   "PASS  Fig 2: the drawing fits in the figure (lowest element at 0.8 > 0)",
