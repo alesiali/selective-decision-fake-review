@@ -250,7 +250,7 @@ TABLE2 = {"hotel": (1875, 796, 1079), "restaurant": (400, 200, 200), "doctor": (
 
 def protocol_counts(logits_dir, data):
     """Read the split sizes from the metadata that train_save_logits.py stored in every RoBERTa logit file, and
-    check that the 45 runs follow the protocol of Section 4.2 (Table 2 sizes, 15% stratified validation split,
+    check that the 45 runs follow the protocol of the "Protocol" section (Table 2 sizes, 15% stratified validation split,
     one validation split per repetition, seeds)."""
     runs = []
     for f in sorted(glob.glob(os.path.join(logits_dir, "*.npz"))):
@@ -294,7 +294,7 @@ def protocol_counts(logits_dir, data):
         seeds_ok = all({r["split_seed"] for r in rs if r["rep"] == k} == {42 + k} and
                        sorted(r["model_seed"] for r in rs if r["rep"] == k) ==
                        ([42, 123, 2024] if k == 0 else [42 + k, 142 + k, 242 + k]) for k in reps)
-        check(seeds_ok, f"Fig 2 {t}: split seeds 42-46 and model seeds as in Section 4.2")
+        check(seeds_ok, f"Fig 2 {t}: split seeds 42-46 and model seeds as in the Protocol section")
         shown = SOURCES[t].split(" + ")  # the order used in the text and in Figure 3
         check(sorted(shown) == src, f"Fig 2 {t}: source names as in Figure 3 ({SOURCES[t]})")
         rows.append((t, shown, n_train, n_val, n_test))
@@ -380,7 +380,7 @@ def figure2(logits_dir, out_dir, data):
     LAB, UNL = "labels", "no labels"
     steps = [("Train the base classifier", {"train": LAB}),
              ("Calibration and ensemble weights", {"val": LAB}),
-             ("Tuned comparison rules (Section 3.5)", {"val": LAB}),
+             ("Tuned comparison rules", {"val": LAB}),
              ("Cost-derived thresholds (Eq. 2)", None),
              ("Decide on each target review", {"tgt": UNL}),
              ("Score the decisions (evaluation only)", {"tgt": LAB})]
@@ -631,7 +631,7 @@ def figure5(results_root, out_dir, data):
     cb.ax.tick_params(length=0)
     cb.set_label("Reduction in mean expected cost relative to the cost-optimal forced decision (%)", fontsize=8)
     save(fig, out_dir, "Figure 5")
-    # values quoted in the article text (Section 5.4, RoBERTa) and the abstract (all models)
+    # values quoted in the article text ("Sensitivity to Costs and Coverage Constraints", RoBERTa) and the abstract (all models)
     print("\nValues for the text (from the plotted grid):")
     for (label, t), pv in summary.items():
         print(f"  {label:<27} {t:<10} min {pv.values.min():6.2f}%  "

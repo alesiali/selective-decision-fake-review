@@ -118,7 +118,7 @@ def s13(results_root):
            "Computed after the main results were seen. The entropy-adjusted score is excluded; it was the cheapest rule in "
            f"{len(init_cells)} main-corpus cells, all on restaurant reviews ("
            + "; ".join(f"{a.replace('Main corpus, ', '')} {c}" for a, b, c in init_cells)
-           + "), by coincidence of the bias direction (Section 6.3); including it, the largest S2 excess of the cost-derived "
+           + "), by coincidence of the bias direction (see \"Why the Entropy-Adjusted Score Fails\" in the article); including it, the largest S2 excess of the cost-derived "
            f"rule would be {hu(s2_with_init, 1)}%.\n",
            "| Scenario | " + " | ".join(RULES) + " |", "|---|" + "---|" * len(RULES)]
     for s in ["S1", "S2", "S3"]:

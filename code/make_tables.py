@@ -2,7 +2,7 @@
 """
 make_tables.py - builds the result tables of the article (markdown + one JSON of every number) from the
 outputs of analyze_logits.py, plus the mechanism analysis of the entropy-adjusted score (comparison rule,
-Section 3.5).
+"Comparison Rules" section of the article).
 
 Usage (from the repository root):
   python code/make_tables.py --results results/roberta --logits logits/roberta --model roberta-base \

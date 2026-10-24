@@ -26,7 +26,7 @@ keys used in results_per_repetition.json and table_main.csv:
                   validation (binary entropy gives exactly the same rule)
   DISAGREE-TUNED  abstain if the std of the three models' probabilities > d, otherwise
                   predict at 0.5; d tuned on validation
-  ORIGINAL-SDF    entropy-adjusted score (comparison rule, Section 3.5): score p * (1 - H(p)),
+  ORIGINAL-SDF    entropy-adjusted score (comparison rule, "Comparison Rules" section): score p * (1 - H(p)),
                   two thresholds on a grid 0.05-0.95 step 0.025 maximising accepted macro-F1
                   subject to coverage >= 0.55
 
@@ -202,7 +202,7 @@ def tune_score_cost(score, p, y, c):
 
 
 def original_sdf_thresholds(p_val, y_val, min_coverage=0.55, grid=ORIG_GRID):
-    """Entropy-adjusted score p * (1 - H(p)) (comparison rule, Section 3.5): maximise accepted macro-F1."""
+    """Entropy-adjusted score p * (1 - H(p)) (comparison rule, "Comparison Rules" section): maximise accepted macro-F1."""
     adj = p_val * (1 - binary_entropy(p_val))
     best = (-1.0, 0.3, 0.7)
     for low in grid:
@@ -347,7 +347,7 @@ def analyse_group(g):
     res["thresholds"]["FORCED-F1"] = t_f1
     d_by_rule["FORCED-F1"] = (pt_o >= t_f1).astype(int)
 
-    # entropy-adjusted score (comparison rule, Section 3.5)
+    # entropy-adjusted score (comparison rule, "Comparison Rules" section)
     lo, hi = original_sdf_thresholds(pv_o, yv)
     res["thresholds"]["ORIGINAL-SDF"] = (lo, hi)
     d_by_rule["ORIGINAL-SDF"] = original_sdf_apply(pt_o, lo, hi)
