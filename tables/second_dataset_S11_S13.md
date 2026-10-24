@@ -121,7 +121,7 @@ Platt scaling fits a slope a and an intercept b to the logit of the validation p
 
 ## Supplementary Table S13 (descriptive). Excess expected cost of each rule over the cheapest of the five rules (%)
 
-Each setting is one model–target combination under one cost scenario, using mean cost over repetitions (29 combinations per scenario). Largest excess / median excess. Computed after the main results were seen. The entropy-adjusted score is excluded; it was the cheapest rule in 8 main-corpus cells, all on restaurant reviews (BERT ensemble S1; BERT ensemble S2; BERT ensemble S3; RoBERTa ensemble S1; RoBERTa ensemble S2; RoBERTa ensemble S3; TF-IDF S1; TF-IDF S3), by coincidence of the bias direction (Section 6.3); including it, the largest S2 excess of the cost-derived rule would be 64.3%.
+Each setting is one model–target combination under one cost scenario, using mean cost over repetitions (29 combinations per scenario). Largest excess / median excess. Computed after the main results were seen. The entropy-adjusted score is excluded; it was the cheapest rule in 8 main-corpus cells, all on restaurant reviews (BERT ensemble S1; BERT ensemble S2; BERT ensemble S3; RoBERTa ensemble S1; RoBERTa ensemble S2; RoBERTa ensemble S3; TF-IDF S1; TF-IDF S3), by coincidence of the bias direction (see "Why the Entropy-Adjusted Score Fails" in the article); including it, the largest S2 excess of the cost-derived rule would be 64.3%.
 
 | Scenario | Forced, F1-tuned | Forced, cost-optimal | Cost-derived three-way | Three-way, tuned | MSP, tuned |
 |---|---|---|---|---|---|

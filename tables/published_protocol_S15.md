@@ -16,7 +16,7 @@ Notes
 
 - Li et al. (2014) tested on doctor reviews with 200 Turker and 200 customer reviews; the doctor file used here has 355 deceptive and 200 genuine reviews, so the balanced accuracy (mean of the two class recalls) is the closer comparator to their accuracy.
 - The linear SVM on unigram counts of the raw review text is a rough check against the "SVM unigram" row of Li et al. (2014), not a replication: their feature weighting, tokenization and hotel subset are not reported.
-- The published accuracies under this protocol are compared in Section 5.1 of the article.
+- The published accuracies under this protocol are compared in the "Transfer and Calibration of the Base Classifiers" section of the article.
 
 Regenerating the numbers (from the repository root)
 
